@@ -1,13 +1,137 @@
+:root {
+    --primary: #e8ffe8;
+    --secondary: #a6fff2;
+}
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+        'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+        'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #4f4f4f;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+        monospace;
 }
+
+.app {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 760px;
+    /* background-image: linear-gradient(-77deg,rgb(51, 108, 214),rgb(65, 126, 226)); */
+    background-color: #282535;
+    height: 100vh;
+    color: white;
+}
+
+.auth-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.logo img {
+    width: 300px;
+}
+
+.login-div {
+    width: 100%;
+    text-align: center;
+}
+
+#alert-div {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: fit-content;
+    text-align: center;
+}
+
+.login-div button {
+    font-size: larger;
+}
+
+/* Main Page */
+
+/* Navbar */
+
+.brand-name {
+    color: white;
+}
+
+.input-chat {
+    position: fixed;
+    bottom: 0%;
+    width: 100%;
+}
+
+.input-chat > * {
+    padding: 12px;
+    font-size: 16px;
+}
+
+.chats-div {
+    margin: 12px;
+    overflow-y: scroll;
+    height: 85vh;
+}
+
+.chat {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    width: fit-content;
+    margin: 12px 0;
+    /* background-color: cyan; */
+    width: 100%;
+    color: black;
+}
+
+.chat-avatar {
+    margin: 4px 8px 0 4px;
+}
+
+.chat-avatar img {
+    object-fit: cover;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.chat-msg {
+    max-width: 500px;
+    min-width: 50px;
+    overflow-wrap: break-word;
+    height: fit-content;
+    padding: 10px 20px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 1px 1px 2px white;
+}
+
+.chat-msg p {
+    margin: 0;
+}
+
+.chat-sender {
+    justify-content: flex-end;
+}
+
+.chat-sender .chat-msg {
+    box-shadow: -1px 1px 2px white;
+}
+

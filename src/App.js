@@ -1,23 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import AuthenticationComp from './comps/Auth/AuthenticationComp';
+import {useAuth } from './contexts/AuthContext'
+import Main from './comps/Main/Main'
 
 function App() {
+
+  const { cUser } = useAuth()
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+
+      {cUser ? <Main/> : <AuthenticationComp />}
+
     </div>
   );
 }
